@@ -15,7 +15,7 @@ import { ApiTags } from '@nestjs/swagger';
 import { FilterApartmentDto } from './dto/filter-apartment.dto';
 
 @ApiTags('Apartments')
-@Controller('apartment')
+@Controller('/api/apartment')
 export class ApartmentController {
   constructor(private readonly apartmentService: ApartmentService) {}
 
