@@ -28,7 +28,7 @@ export default defineConfig({
          var chunks=[
              "antd","react","@azure","tailwind",
              "google","hookform","workbox"]
-         ]
+         
       /*  if (id.includes('antd')) {
             return 'antd';
           }
