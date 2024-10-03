@@ -1,0 +1,93 @@
+Arguments: 
+  /usr/local/share/nvm/versions/node/v20.12.1/bin/node /usr/share/yarn/bin/yarn.js add vite @vitejs/plugin-react vitejs-tsconfig-paths vite-tsconfig-paths
+
+PATH: 
+  /opt/git/bin:/usr/local/rvm/gems/ruby-3.2.3/bin:/usr/local/rvm/gems/ruby-3.2.3@global/bin:/usr/local/rvm/rubies/ruby-3.2.3/bin:/opt/git/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v20.12.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:~/.dotnet/tools:/root/.local/bin:/usr/local/rvm/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.12.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/vitejs-tsconfig-paths: Not found
+      at params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66145:18)
+      at self.callback (/usr/share/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:518:28)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:518:28)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:632:28)
+      at IncomingMessage.emit (node:events:530:35)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  {
+    "name": "client",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@hookform/resolvers": "^3.3.2",
+      "@react-google-maps/api": "^2.19.2",
+      "@testing-library/jest-dom": "^5.17.0",
+      "@testing-library/user-event": "^13.5.0",
+      "@types/jest": "^27.5.2",
+      "@types/node": "^16.18.59",
+      "@types/react": "^18.2.29",
+      "@types/react-dom": "^18.2.14",
+      "@vis.gl/react-google-maps": "^0.5.4",
+      "antd": "^5.10.1",
+      "axios": "^1.6.7",
+      "jest": "^27.5.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-hook-form": "^7.47.0",
+      "react-icons": "^5.0.1",
+      "react-query": "^3.39.3",
+      "react-router-dom": "^6.21.3",
+      "react-scripts": "5.0.1",
+      "typescript": "^4.9.5",
+      "web-vitals": "^2.1.4",
+      "yup": "^1.3.2"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@testing-library/react": "^14.2.1",
+      "react-test-renderer": "^18.2.0",
+      "tailwindcss": "^3.3.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
