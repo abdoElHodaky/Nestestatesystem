@@ -7,11 +7,17 @@ import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './Auth/Auth.module';
 import { JwtAuthGuard } from './common/guards/private.guard';
 import { APP_GUARD } from '@nestjs/core';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync({ useClass: DatabaseConfigService }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'client/dist/'),
+      exclude: ['/api/(.*)'],
+    }),
     AuthModule,
     ApartmentModule,
     UserModule,
