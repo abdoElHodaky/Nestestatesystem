@@ -30,10 +30,13 @@ export default defineConfig({
           if(id.includes("tailwind")){
               return "tailwind";
           }
-         if(id.includes('react'){
+         if(id.includes('react')){
              return "react";
          }
-         else return "vendor";
+         if(id.includes("workbox")){
+             return "workbox";
+         }
+        else return "modules";
         },
       },
     },
