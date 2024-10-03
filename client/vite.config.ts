@@ -23,8 +23,13 @@ export default defineConfig({
          * 2. Use in function form
          * Package all third-party packages into one chunk, named vendor
          */
-        manualChunks(id, { getModuleInfo, getModuleIds }) {
-          if (id.includes('antd')) {
+          
+       manualChunks(id, { getModuleInfo, getModuleIds }) {
+         var chunks=[
+             "antd","react","@azure","tailwind",
+             "google","hookform","workbox"]
+         ]
+      /*  if (id.includes('antd')) {
             return 'antd';
           }
           if(id.includes("tailwind")){
@@ -36,15 +41,16 @@ export default defineConfig({
          if(id.includes("workbox")){
              return "workbox";
          }
-        if(id.includes("azure")){
+        if(id.includes("@azure")){
              return "azure";
          }
          if(id.includes("google")){
              return "google";
          }
-         if(id.includes("testing")){
-             return "testing";
-         }
+         if(id.includes("hookform")){
+             return "hookform";
+         }*/
+         if(id in chunks) return `${id}`
          else return "vendor";
         },
       },
