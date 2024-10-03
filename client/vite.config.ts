@@ -25,10 +25,18 @@ export default defineConfig({
          */
           
        manualChunks(id, { getModuleInfo, getModuleIds }) {
-         var chunks=[
-             "antd","react","@azure","tailwind",
-             "google","hookform","workbox"]
-         
+        if (id.includes("node_modules")) 
+        {
+          return id.toString().split("node_modules/")[1].split("/")[0].toString();
+        }
+        else if (id.includes("src"))
+        {
+          return "src";
+        }
+        else
+        { 
+          return "index";
+        }
       /*  if (id.includes('antd')) {
             return 'antd';
           }
@@ -50,8 +58,6 @@ export default defineConfig({
          if(id.includes("hookform")){
              return "hookform";
          }*/
-         if(id in chunks) return `${id}`
-         else return "vendor";
         },
       },
     },
