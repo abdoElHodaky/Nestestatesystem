@@ -36,7 +36,16 @@ export default defineConfig({
          if(id.includes("workbox")){
              return "workbox";
          }
-        else return "modules";
+        if(id.includes("azure")){
+             return "azure";
+         }
+         if(id.includes("google")){
+             return "google";
+         }
+         if(id.includes("testing")){
+             return "testing";
+         }
+         else return "vendor";
         },
       },
     },
