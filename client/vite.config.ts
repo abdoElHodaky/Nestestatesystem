@@ -16,4 +16,27 @@ export default defineConfig({
         // this sets a default port to 3000  
         port: 3000, 
     },
+    build: {
+    rollupOptions: {
+      output: {
+        /**
+         * 2. Use in function form
+         * Package all third-party packages into one chunk, named vendor
+         */
+        manualChunks(id, { getModuleInfo, getModuleIds }) {
+          if (id.includes('antd')) {
+            return 'antd';
+          }
+          if(id.includes("tailwind")){
+              return "tailwind";
+          }
+         if(id.includes('react'){
+             return "react";
+         }
+         else return "vendor";
+        },
+      },
+    },
+  },
+    
 })
