@@ -2,7 +2,7 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import { memo, useCallback, useState } from "react";
 
-const API_KEY = process.env.REACT_APP_API_KEY || "";
+const API_KEY = import.meta.env.VITE_REACT_APP_MAPS_API_KEY || "";
 
 function GoogleMapContainer() {
   return (
