@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { getToken } from "../helpers/auth";
 
-const BASE_URL = process.env.REACT_APP_BACKEND_URL_API;
+const BASE_URL = import.meta.env.REACT_APP_BACKEND_URL_API;
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
