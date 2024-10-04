@@ -6,7 +6,7 @@ import { appRoutes } from "./routes";
 import {registerSW} from "./swreg";
 function App() {
   useEffect(()=>{
-    registerSW()
+    setTimeout(()=>registerSW(),15000)
   },[])
   const queryClient = new QueryClient();
   return (
