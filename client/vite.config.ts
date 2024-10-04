@@ -5,7 +5,62 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
     // depending on your application, base can also be "/"
     base: '/',
-    plugins: [react({
+    plugins: [
+        VitePWA({
+           registerType:"auto",
+            workbox: {
+	globDirectory: 'public/',
+	globPatterns: [
+		'**/*.{css,png,jpg,ico,js,txt}'
+	],
+	//navigateFallback:"/offline",
+	runtimeCaching: [{
+    urlPattern: ({request, url}) =>url.includes("cdn")==true,
+    handler: 'NetworkFirst',
+    options: {
+      cacheName: 'cdns',
+      expiration: {
+        maxEntries: 20,
+	maxAgeSeconds: 2 * 24 * 60 * 60,
+      },
+      cacheableResponse:{
+	statuses: [0, 200]
+      }
+    },
+  },{
+    urlPattern: ({request, url}) => request.method=="POST",
+    handler:"NetworkOnly",
+    method:"POST",
+    options:{
+      cacheName:"apCachePost",
+      cacheableResponse:{
+	statuses: [0, 200]
+      },
+      backgroundSync:{
+       name:"Apisync",
+       options:{
+    	maxRetentionTime:24*60*2
+       }
+      }
+    }
+  },{
+    urlPattern: ({request, url}) =>url.includes("fonts")==true,
+    handler: 'NetworkFirst',
+    options: {
+      cacheName: 'cdns',
+      expiration: {
+        maxEntries: 20,
+	maxAgeSeconds: 2 * 24 * 60 * 60,
+      },
+      cacheableResponse:{
+	statuses: [0, 200]
+      }
+    }
+  }],
+   swDest: 'public/sw.js'
+}})
+        
+        ,react({
         babel:{
           configFile: true
         }
