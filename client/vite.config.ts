@@ -62,7 +62,7 @@ export default defineConfig({
       }
     }
   }],
-   swDest: 'public/sw.js'
+   swDest: 'dist/sw.js'
      }})
     ],
     server: {    
