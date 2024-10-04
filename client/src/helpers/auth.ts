@@ -1,4 +1,4 @@
-const tokenStorageKey = import.meta.env.REACT_APP_TOKEN_KEY || "";
+const tokenStorageKey = import.meta.env.VITE_REACT_APP_TOKEN_KEY || "";
 
 export const storeToken = (token: string) => {
   sessionStorage.setItem(tokenStorageKey, JSON.stringify({ id: token }));
