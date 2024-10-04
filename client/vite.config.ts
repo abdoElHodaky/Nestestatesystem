@@ -1,12 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-//import viteTsconfigPaths from 'vite-tsconfig-paths'
+import VitePWA from 'vite-plugin-pwa'
 
 export default defineConfig({
     // depending on your application, base can also be "/"
     base: '/',
     plugins: [
-        VitePWA({
+        react({
+        babel:{
+          configFile: true
+        }
+    }),
+    VitePWA({
            registerType:"auto",
             workbox: {
 	globDirectory: 'public/',
@@ -58,13 +63,8 @@ export default defineConfig({
     }
   }],
    swDest: 'public/sw.js'
-}})
-        
-        ,react({
-        babel:{
-          configFile: true
-        }
-    })],
+     }})
+    ],
     server: {    
         // this ensures that the browser opens upon server start
         open: true,
