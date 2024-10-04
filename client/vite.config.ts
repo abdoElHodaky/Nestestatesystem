@@ -14,7 +14,7 @@ export default defineConfig({
     VitePWA({
            registerType:"auto",
             workbox: {
-	globDirectory: 'public/',
+	globDirectory: '/',
 	globPatterns: [
 		'**/*.{css,png,jpg,ico,js,txt}'
 	],
