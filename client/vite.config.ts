@@ -82,15 +82,15 @@ export default defineConfig({
        manualChunks(id, { getModuleInfo, getModuleIds }) {
         if (id.includes("node_modules")) 
         {
-          return id.toString().split("node_modules/")[1].split("/")[0].toString();
+          return "js/"+id.toString().split("node_modules/")[1].split("/")[0].toString();
         }
         else if (id.includes("src"))
         {
-          return "src";
+          return "js/src";
         }
         else
         { 
-          return "index";
+          return "js/index";
         }
       /*  if (id.includes('antd')) {
             return 'antd';
