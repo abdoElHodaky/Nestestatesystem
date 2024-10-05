@@ -14,10 +14,10 @@ import { join } from 'path';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync({ useClass: DatabaseConfigService }),
-   /* ServeStaticModule.forRoot({
+    ServeStaticModule.forRoot({
       rootPath: process.cwd() + '/client/dist/',
       exclude: ['/api/(.*)'],
-    }),*/
+    }),
     AuthModule,
     ApartmentModule,
     UserModule,
