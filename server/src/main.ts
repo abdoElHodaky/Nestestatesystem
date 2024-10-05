@@ -9,6 +9,7 @@ async function bootstrap() {
   SwaggerBuild(app);
   app.setGlobalPrefix('/api');
   app.useGlobalInterceptors(new MiddlewareInterceptor());
-  await app.listen(process.env.NODE_SERVER_PORT);
+  app.listen(process.env.NODE_SERVER_PORT,process.env.APP_URL).
+    then(console.log).catch(console.log);
 }
 bootstrap();
