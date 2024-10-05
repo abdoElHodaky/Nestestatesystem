@@ -9,8 +9,9 @@ RUN apk add --no-cache tzdata  sqlite-dev postgresql-dev mysql-dev protobuf prot
 RUN  npm install pm2 npm-run-all  -g
 RUN ln -s /usr/local/lib/node_modules/ ../node_modules 
 RUN chmod 777 -R . 
-#ENV APP_URL=0.0.0.0
+ENV APP_URL=0.0.0.0
 ENV ENABLE_OVERCOMMIT_MEMORY=true
+ENV NODE_SERVER_PORT=4000
 #RUN mkdir -p backend/public
 #RUN cd client && npm i --force && \npm run build
 #cp -r build/. backend/public && \
