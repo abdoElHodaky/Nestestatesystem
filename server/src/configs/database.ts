@@ -21,7 +21,7 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
       },
       entities: [Apartment, User],
       synchronize: true,
-      logging: false,
+      logging: true,
     };
   }
 }
