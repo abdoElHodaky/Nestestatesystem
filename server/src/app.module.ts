@@ -15,7 +15,7 @@ import { join } from 'path';
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync({ useClass: DatabaseConfigService }),
     ServeStaticModule.forRoot({
-      rootPath: join(process.cwd(),'client/dist/'),
+      rootPath: join(__dirname, '../../', 'client/dist/'),
       exclude: ['/api/(.*)'],
     }),
     AuthModule,
