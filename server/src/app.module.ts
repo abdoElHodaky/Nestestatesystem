@@ -15,11 +15,11 @@ import { join } from 'path';
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync({ useClass: DatabaseConfigService }),
     ServeStaticModule.forRoot({
-<<<<<<< HEAD
+//<<<<<<< HEAD
       rootPath: process.cwd() + '/client/dist/',
-=======
+/*=======
       rootPath: process.cwd()+"/client/dist/",
->>>>>>> b2df8e387dbde97e1cfe5629f166f471dd955d5a
+>>>>>>> b2df8e387dbde97e1cfe5629f166f471dd955d5a*/
       exclude: ['/api/(.*)'],
     }),
     AuthModule,
