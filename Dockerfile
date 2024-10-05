@@ -17,6 +17,6 @@ ENV NODE_SERVER_PORT=4000
 #cp -r build/. backend/public && \
 RUN cd server && npm install --force && \
  npm run build
-EXPOSE 3000
+EXPOSE ${NODE_SERVER_PORT}
 CMD ["sh","s.sh"]
 #CMD ["/usr/bin/supervisord","-c","./supervisord.conf"]
