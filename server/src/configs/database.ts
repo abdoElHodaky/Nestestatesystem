@@ -17,12 +17,9 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
       password: this.config.get('MYSQL_ROOT_PASSWORD')||process.env.MYSQL_PASSWORD,
       database: this.config.get('MYSQL_DATABASE')||process.env.MYSQL_DATABASE,
       cache:{
-        type:"ioredis",
+        type:"redis",
         options:{
-          host:redis.host,
-          password:redis.password,
-          username:"default",
-          port:redis.port
+          url: process.env.REDIS_URL
         },
         duration:300000
       },
