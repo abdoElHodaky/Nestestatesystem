@@ -12,10 +12,10 @@ RUN chmod 777 -R .
 #ENV APP_URL=0.0.0.0
 ENV ENABLE_OVERCOMMIT_MEMORY=true
 #RUN mkdir -p backend/public
-RUN cd client && yarn install && \
+RUN cd client && npm i --force && \
 npm run build
 #cp -r build/. backend/public && \
-RUN cd server && npm install && \
+RUN cd server && npm install --force && \
 npm run build
 EXPOSE 3000 
 CMD ["node","server/dist/main.js"]
