@@ -17,9 +17,13 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
       password: this.config.get('MYSQL_ROOT_PASSWORD')||process.env.MYSQL_PASSWORD,
       database: this.config.get('MYSQL_DATABASE')||process.env.MYSQL_DATABASE,
       cache:{
-        type:"redis",
+        type:"ioredis",
         options:{
-          url: process.env.REDIS_URL
+          host: "fly-nestestatesystem-redis.upstash.io",
+          port: 6379,
+          username: "default",
+          password: "8b96c138f66449d7a90f1e32f16f6884",
+          family: 6
         },
         duration:300000
       },
