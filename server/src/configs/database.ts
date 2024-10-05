@@ -16,7 +16,7 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
       database: this.config.get('MYSQL_DATABASE'),
       cache:{
         type:"ioredis",
-        options:{ port:this.config.get("REDIS_URL")},
+        options:{ url:this.config.get("REDIS_URL")},
         duration:300000
       },
       entities: [Apartment, User],
