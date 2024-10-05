@@ -9,7 +9,7 @@ import { JwtAuthGuard } from './common/guards/private.guard';
 import { APP_GUARD } from '@nestjs/core';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
-console.log(join(__dirname, '../../', 'client/dist/'))
+//console.log(join(__dirname, '../../', 'client/dist/'))
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
