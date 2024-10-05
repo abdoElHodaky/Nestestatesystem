@@ -4,10 +4,11 @@ import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 import { Apartment } from 'src/apartment/entities/apartment.entity';
 import { User } from 'src/user/entities/user.entity';
 var redisParser = require('redis-url-parser');
-console.log(redisParser.parse(this.config.get("REDIS_URL")))
+
 export class DatabaseConfigService implements TypeOrmOptionsFactory {
   constructor(@Inject(ConfigService) private readonly config: ConfigService) {}
   createTypeOrmOptions(): TypeOrmModuleOptions | Promise<TypeOrmModuleOptions> {
+   console.log(redisParser.parse(this.config.get("REDIS_URL")))
     return {
       type: 'mysql',
       host: this.config.get('DB_HOST'),
