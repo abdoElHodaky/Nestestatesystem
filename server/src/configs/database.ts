@@ -21,7 +21,7 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
         options:{
           host: "fly-nestestatesystem-redis.upstash.io",
           port: 6379,
-          username: "default",
+         // username: "default",
           password: "8b96c138f66449d7a90f1e32f16f6884",
           showFriendlyErrorStack: true // See https://github.com/luin/ioredis#error-handling
           //lazyConnect: true, 
