@@ -3,6 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 import { Apartment } from 'src/apartment/entities/apartment.entity';
 import { User } from 'src/user/entities/user.entity';
+var redisParser = require('redis-url-parser');
 
 export class DatabaseConfigService implements TypeOrmOptionsFactory {
   constructor(@Inject(ConfigService) private readonly config: ConfigService) {}
@@ -15,8 +16,8 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
       password: this.config.get('MYSQL_ROOT_PASSWORD'),
       database: this.config.get('MYSQL_DATABASE'),
       cache:{
-        type:"database",
-       // options:{ port:this.config.get("REDIS_URL")},
+        type:"redis",
+        options:{ ...redisParser.parse(this.config.get("REDIS_URL"))},
         duration:300000
       },
       entities: [Apartment, User],
