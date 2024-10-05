@@ -17,7 +17,7 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
       password: this.config.get('MYSQL_ROOT_PASSWORD')||process.env.MYSQL_PASSWORD,
       database: this.config.get('MYSQL_DATABASE')||process.env.MYSQL_DATABASE,
       cache:{
-        type:"ioredis",
+       /* type:"ioredis",
         options:{
           host: "fly-nestestatesystem-redis.upstash.io",
           port: 6379,
@@ -25,8 +25,8 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
           password: "8b96c138f66449d7a90f1e32f16f6884",
           showFriendlyErrorStack: true // See https://github.com/luin/ioredis#error-handling
           //lazyConnect: true, 
-        },
-        duration:300000
+        },*/
+        duration:30000
       },
       entities: [Apartment, User],
       synchronize: true,
