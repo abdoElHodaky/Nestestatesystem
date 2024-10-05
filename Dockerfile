@@ -16,6 +16,6 @@ ENV ENABLE_OVERCOMMIT_MEMORY=true
 #cp -r build/. backend/public && \
 RUN cd server && npm install --force && \
 npm run build
-EXPOSE 3000 
+EXPOSE 4000 3000
 CMD ["node","server/dist/main.js"]
 #CMD ["/usr/bin/supervisord","-c","./supervisord.conf"]
