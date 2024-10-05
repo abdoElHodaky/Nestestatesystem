@@ -10,7 +10,7 @@ async function bootstrap() {
   SwaggerBuild(app);
   app.setGlobalPrefix('/api');
   app.useGlobalInterceptors(new MiddlewareInterceptor());
-  app.useStaticAssets(staticDirectory);
+ // app.useStaticAssets(staticDirectory);
   app.listen(process.env.NODE_SERVER_PORT,process.env.APP_URL).
     then(()=>console.log("Listen")).catch(console.log);
 }
