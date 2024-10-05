@@ -14,6 +14,10 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
       username: this.config.get('MYSQL_DATABASE_USER_NAME'),
       password: this.config.get('MYSQL_ROOT_PASSWORD'),
       database: this.config.get('MYSQL_DATABASE'),
+      cache:{
+        type:"ioredis",
+        port:this.config.get("REDIS_URL")
+      },
       entities: [Apartment, User],
       synchronize: true,
       logging: true,
