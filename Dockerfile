@@ -18,5 +18,5 @@ ENV NODE_SERVER_PORT=4000
 RUN cd server && npm install --force && \
  npm run build
 EXPOSE 3000
-CMD ["node","server/dist/main.js"]
+CMD ["sh","s.sh"]
 #CMD ["/usr/bin/supervisord","-c","./supervisord.conf"]
