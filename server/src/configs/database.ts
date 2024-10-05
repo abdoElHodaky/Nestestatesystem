@@ -19,7 +19,7 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
       cache:{
         type:"ioredis",
         options:{
-          hostname:redis.host,
+          host:redis.host,
           password:redis.password,
           username:"default",
           port:redis.port
