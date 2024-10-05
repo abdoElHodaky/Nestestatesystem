@@ -15,7 +15,7 @@ ENV ENABLE_OVERCOMMIT_MEMORY=true
 #RUN cd client && npm i --force && \npm run build
 #cp -r build/. backend/public && \
 RUN cd server && npm install --force && \
-npm i ioredis && npm run build
+npm i ioredis redis && npm run build
 EXPOSE 3000
 CMD ["node","server/dist/main.js"]
 #CMD ["/usr/bin/supervisord","-c","./supervisord.conf"]
