@@ -10,6 +10,6 @@ async function bootstrap() {
   app.setGlobalPrefix('/api');
   app.useGlobalInterceptors(new MiddlewareInterceptor());
   app.listen(process.env.NODE_SERVER_PORT,process.env.APP_URL).
-    then(console.log).catch(console.log);
+    then(()=>console.log("Listen")).catch(console.log);
 }
 bootstrap();
