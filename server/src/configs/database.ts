@@ -22,8 +22,8 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
           host: "fly-nestestatesystem-redis.upstash.io",
           port: 6379,
           username: "default",
-          password: "8b96c138f66449d7a90f1e32f16f6884"
-          
+          password: "8b96c138f66449d7a90f1e32f16f6884",
+          family:6
         },
         duration:300000
       },
