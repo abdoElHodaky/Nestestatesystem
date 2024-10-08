@@ -69,9 +69,8 @@ export function Header() {
             <UserProfileMenu />
           </>
         ) : (
-           {
-             
-             (location.href.includes("login"))?(
+           
+             (location.href.includes("login")==true)?(
                
                <PrimaryButton onClick={routeToSignInPage}}>
                 SignIn
@@ -82,7 +81,6 @@ export function Header() {
                 SignUp
                </PrimaryButton>
              )
-           }
            
           )}
       </div>
