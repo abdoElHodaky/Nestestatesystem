@@ -72,12 +72,12 @@ export function Header() {
            
              (location.href.includes("login")==true)?(
                
-               <PrimaryButton onClick={routeToSignInPage}}>
+               <PrimaryButton onClick={routeToSignInPage}>
                 SignIn
                </PrimaryButton>
                
              ):(
-               <PrimaryButton onClick={routeToSignUpPage}}>
+               <PrimaryButton onClick={routeToSignUpPage}>
                 SignUp
                </PrimaryButton>
              )
