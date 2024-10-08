@@ -69,9 +69,22 @@ export function Header() {
             <UserProfileMenu />
           </>
         ) : (
-          <PrimaryButton onClick={(location.href.includes("login"))?routeToSignInPage:routeToSignUp
-          age}>{location.href.includes("login")? SignIn:SignUp }</PrimaryButton>
-        )}
+           {
+             
+             (location.href.includes("login"))?(
+               
+               <PrimaryButton onClick={routeToSignInPage}}>
+                SignIn
+               </PrimaryButton>
+               
+             ):(
+               <PrimaryButton onClick={routeToSignUpPage}}>
+                SignUp
+               </PrimaryButton>
+             )
+           }
+           
+          )}
       </div>
     </div>
   );
