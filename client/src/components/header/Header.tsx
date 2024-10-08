@@ -19,6 +19,9 @@ export function Header() {
   };
 
   const routeToSignInPage = () => {
+    navigate("/login");
+  };
+  const routeToSignUpPage = () => {
     navigate("/register");
   };
 
@@ -66,7 +69,8 @@ export function Header() {
             <UserProfileMenu />
           </>
         ) : (
-          <PrimaryButton onClick={routeToSignInPage}>Sign in</PrimaryButton>
+          <PrimaryButton onClick={(location.href.includes("login"))?routeToSignInPage:routeToSignUp
+          age}>{location.href.includes("login")? SignIn:SignUp }</PrimaryButton>
         )}
       </div>
     </div>
