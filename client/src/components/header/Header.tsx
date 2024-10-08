@@ -33,7 +33,7 @@ export function Header() {
           fontFamily: "fantasy",
         }}
       >
-        <h1 style={{ color: "white", fontWeight: "bold" }}>Rental UK</h1>
+        <h1 style={{ color: "white", fontWeight: "bold" }}>Rental </h1>
       </div>
 
       <div className="flex justify-between" style={{ width: "40%" }}>
