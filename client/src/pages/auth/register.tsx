@@ -100,12 +100,7 @@ function RegisterPage() {
             name="username"
           />
 
-          <div className="mt-6 mb-6">
-            <Checkbox value={isRealtor} onChange={onChange}>
-              as Realtor
-            </Checkbox>
-          </div>
-
+          
           <Controller
             control={control}
             rules={{
@@ -150,16 +145,24 @@ function RegisterPage() {
             name="password"
           />
 
+          
+           <div className="mt-6 mb-6">
+            <Checkbox value={isRealtor} onChange={onChange}>
+              as Realtor
+            </Checkbox>
+          </div>
+
+          
           <div>
             <PrimaryButton onClick={handleSubmit(onSubmit)}>
-              Sign In
+              Sign Up
             </PrimaryButton>
 
             <div className="p-4 pl-0">
               <p style={{ display: "inline-block" }} className="mr-2">
                 Do you have an account already ?
               </p>
-              <Link to={"/login"}>Sign up</Link>
+              <Link to={"/login"}>Sign In</Link>
             </div>
           </div>
         </Form>
