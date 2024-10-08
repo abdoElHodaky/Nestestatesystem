@@ -12,8 +12,7 @@ RUN chmod 777 -R .
 ENV APP_URL=0.0.0.0
 ENV ENABLE_OVERCOMMIT_MEMORY=true
 
-RUN cd client && npm install -- force && \
-npm run build
+#RUN cd client && npm install -- force && \npm run build
 
 RUN cd server && npm install --force && \
  npm run build
