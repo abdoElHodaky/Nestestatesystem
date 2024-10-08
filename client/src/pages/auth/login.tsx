@@ -111,7 +111,7 @@ function LoginPage() {
 
             <div>
               <PrimaryButton onClick={handleSubmit(onSubmit)}>
-                Sign Up
+                Sign In
               </PrimaryButton>
 
               <div className="p-4 pl-0">
