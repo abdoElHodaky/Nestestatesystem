@@ -26,6 +26,11 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
           showFriendlyErrorStack: true // See https://github.com/luin/ioredis#error-handling
           //lazyConnect: true, 
         },*/
+        type:"ioredis",
+        options:{
+         port:`${process.env.REDIS_URL}`
+          //url:`${process.env.CACHE_URL}`,
+         },
         duration:30000
       },
       entities: [Apartment, User],
