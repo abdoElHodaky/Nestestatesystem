@@ -35,7 +35,10 @@ export class ApartmentService {
   }
 
   findOne(id: number) {
-    return this.apartmentRepository.findBy({ id: id });
+    return this.apartmentRepository.findBy({
+      where:{id:id},
+      cache:true
+    });
   }
 
   update(id: number, updateApartmentDto: UpdateApartmentDto) {
